@@ -1,0 +1,12 @@
+html {font-family: sans-serif;}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+div, p {
+    padding: 0.8em;
+    margin: 1em 0;
+    border: 1px solid #9c9c9c
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            color: rgb(95, 232, 132);
+        }
+        button {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            width: 300px;
+            padding: 1em;
+            margin: 0.5em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulator</title>
+</head>
+<body>
+    <h1>Button Colors</h1>
+    <h2>Practice with getElementsByClassName</h2>
+    <div>
+    <button onclick="Red()" class="Red Reset">Click me to turn Red</button><br>
+    <button onclick="Green()" class="Green Reset">Click me to turn Green</button><br>
+    <button onclick="Blue()" class="Blue Reset">Click me to turn Blue</button><br>
+    <button onclick="Reset()" class="Reset">Reset</button>
+    </div>
+
+    <script>
+        function Red(){
+            document.getElementsByClassName("Red")[0]
+            .style.backgroundColor = 'Red';
+        }
+        function Green(){
+            document.getElementsByClassName("Green")[0]
+            .style.backgroundColor = 'green';
+        }
+        function Blue(){
+            document.getElementsByClassName("Blue")[0]
+            .style.backgroundColor = 'blue';
+        }
+        function Reset(){
+            let colors = document.getElementsByClassName("Reset")
+            for(i=0;i<colors.length;i++)
+            colors[i].style.backgroundColor = 'black'
+        }
+    </script>
+</body>
+</html>

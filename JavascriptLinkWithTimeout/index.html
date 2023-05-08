@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Pats Title</title>
+        Pats Link with Timeout Page
+    </head>
+    <body>
+        <h1>Wanna Find out what Shivoo means?</h1>
+        <p>To find out, click the button below.  The new window will close after 5000ms (aka: 5 seconds)</p>
+        <button onclick="defintionWindow()">Curious?</button>
+
+        <script>
+            function defintionWindow()
+            {
+                let url = 'https://dictionary.com/browse/shivoo?s=t';
+                let definitionWindow = window.open(url, "", "width=500, height=800");
+                //close this window after 5 seconds
+                setTimeout(() => {
+                    console.log("Window closed");
+                    definitionWindow.close();
+                }, 5000);
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>DOM Cloning</title>
+        <style>
+            body {
+                background-color: purple;
+                padding: 30px;
+            }
+            h1 {
+                color: teal;
+                font-size: 72px;
+                font-family: sans-serif;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Am I Real?</h1>
+        <p class="message">Or am I figment of your imagination</p>
+
+        <script>
+            let bodyElement = document.querySelector('body');
+            let paragraphElement = document.querySelector('.message');
+
+            //define sayWhat() function
+            function sayWhat() {
+                let clonedText = paragraphElement.cloneNode(true);
+                bodyElement.appendChild(clonedText);
+            }
+
+            setInterval(sayWhat, 3000);
+
+        </script>
+    </body>
+</html>
